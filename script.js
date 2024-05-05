@@ -6,14 +6,18 @@ const res = document.querySelector('.res')
 const ran = document.querySelector('.rand') 
 
 plu.onclick = () => {
-    num.innerText++
+    if (num.innerHTML < 10) {
+        num.innerHTML++
+    }
 }
 min.onclick = () => {
-    num.innerText--
+    if(num.innerHTML > 0) {
+        num.innerText--
+    }
 }
 res.onclick = () => {
     num.innerText = 0
 }
 ran.onclick = () => {
-    num.innerText = Math.round(Math.random() * 100)
+        num.innerText = Math.round(Math.random() * 10)
 }
